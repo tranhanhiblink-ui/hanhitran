@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài 3 · Tổng quan về trí tuệ nhân tạo — Trần Thị Hà Nhi</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FAF6EF', ink: '#2B2A28', inksoft: '#5C5A54',
+          sage: '#4B5D45', sagedark: '#3D4C38', clay: '#C97C5D',
+          claysoft: '#EFE7DA', line: '#E4DECE'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Be Vietnam Pro', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="bg-cream text-ink font-body">
+
+<header class="sticky top-0 z-20 bg-cream/90 backdrop-blur border-b border-line">
+  <div class="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-lg font-medium">Hà Nhi</a>
+    <nav class="flex gap-7 text-sm font-medium text-inksoft">
+      <a href="index.html" class="nav-link">Giới thiệu</a>
+      <a href="du-an.html" class="nav-link active">Dự án</a>
+      <a href="tong-ket.html" class="nav-link">Tổng kết</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-6">
+
+  <div class="pt-10">
+    <a href="du-an.html" class="text-sm text-inksoft hover:text-sage transition-colors">← Quay lại Dự án</a>
+  </div>
+
+  <section class="py-8 border-b border-line fade-up">
+    <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-3">Bài 03</p>
+    <h1 class="font-display font-medium text-3xl md:text-4xl mb-2">Tổng quan về trí tuệ nhân tạo</h1>
+    <p class="text-sm text-inksoft">Kỹ năng viết Prompt hiệu quả cho mô hình ngôn ngữ lớn · Công cụ thử nghiệm: ChatGPT (GPT-4o)</p>
+  </section>
+
+  <section class="py-10 border-b border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-3">Mục tiêu bài tập</h2>
+    <p class="text-ink leading-relaxed">
+      Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ
+      lớn (LLM) trong học tập. Thông qua thử nghiệm 9 prompt cho 3 tác vụ học tập phổ biến, bài
+      tập phân tích sự khác biệt về chất lượng đầu ra giữa ba mức prompt: cơ bản, cải tiến và
+      nâng cao.
+    </p>
+  </section>
+
+  <section class="py-10 border-b border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-6">Quá trình thực hiện — 3 tác vụ thử nghiệm</h2>
+
+    <div class="space-y-4">
+
+      <details class="group bg-white border border-line rounded-xl p-5 open:pb-2" open>
+        <summary class="cursor-pointer font-display text-lg font-medium flex items-center justify-between">
+          <span>1. Tóm tắt tài liệu học thuật</span>
+          <span class="text-inksoft text-sm group-open:rotate-180 transition-transform">⌄</span>
+        </summary>
+        <p class="text-xs text-inksoft mt-2 mb-4">Tài liệu thử nghiệm: Giáo trình Nhập môn Việt ngữ học (nmnvn.pdf)</p>
+        <div class="space-y-3 text-sm">
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cơ bản</p>
+            <p class="italic text-inksoft mb-1">"Tóm tắt bài này cho tôi."</p>
+            <p class="text-inksoft">Kết quả tổng quát, không có cấu trúc rõ ràng, độ dài không kiểm soát.</p>
+          </div>
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cải tiến</p>
+            <p class="italic text-inksoft mb-1">"Hãy tóm tắt theo cấu trúc: (1) Ý chính, (2) Luận điểm hỗ trợ, (3) Kết luận. Khoảng 150 từ."</p>
+            <p class="text-inksoft">Kết quả có 3 phần rõ ràng, mạch lạc, độ dài kiểm soát tốt hơn rõ rệt.</p>
+          </div>
+          <div class="border-l-2 border-sage pl-4">
+            <p class="text-xs font-semibold text-sage uppercase mb-1">Prompt nâng cao (Role + Chain-of-Thought)</p>
+            <p class="italic text-inksoft mb-1">"Bạn là trợ lý học thuật... tóm tắt theo từng bước: Bước 1 xác định chủ đề, Bước 2 liệt kê 3 luận điểm kèm bằng chứng, Bước 3 nêu ý nghĩa thực tiễn..."</p>
+            <p class="text-inksoft">Kết quả có 3 bước rõ tiêu đề, dẫn chứng cụ thể từ nghiên cứu — bản tóm tắt học thuật hoàn chỉnh và sâu sắc nhất.</p>
+          </div>
+        </div>
+        <p class="text-xs font-semibold text-inksoft uppercase mt-5 mb-2">Ảnh chụp màn hình quá trình</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <img src="images/bai3/img1.jpg" alt="Tác vụ 1 - ảnh chụp 1" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img2.jpg" alt="Tác vụ 1 - ảnh chụp 2" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img3.jpg" alt="Tác vụ 1 - ảnh chụp 3" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img4.jpg" alt="Tác vụ 1 - ảnh chụp 4" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img5.jpg" alt="Tác vụ 1 - ảnh chụp 5" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img6.jpg" alt="Tác vụ 1 - ảnh chụp 6" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img7.jpg" alt="Tác vụ 1 - ảnh chụp 7" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+      </details>
+
+      <details class="group bg-white border border-line rounded-xl p-5 open:pb-2">
+        <summary class="cursor-pointer font-display text-lg font-medium flex items-center justify-between">
+          <span>2. Giải thích khái niệm phức tạp — Entropy</span>
+          <span class="text-inksoft text-sm group-open:rotate-180 transition-transform">⌄</span>
+        </summary>
+        <div class="space-y-3 text-sm mt-4">
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cơ bản</p>
+            <p class="italic text-inksoft mb-1">"Giải thích Entropy là gì?"</p>
+            <p class="text-inksoft">Câu trả lời lẫn lộn giữa vật lý và lý thuyết thông tin, khó hiểu với người mới.</p>
+          </div>
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cải tiến</p>
+            <p class="italic text-inksoft mb-1">"Giải thích Entropy trong nhiệt động lực học cho sinh viên chưa học vật lý đại học... khoảng 200 từ."</p>
+            <p class="text-inksoft">Tập trung hơn, ví dụ đá lạnh trong nước, phạm vi hẹp và dễ hiểu hơn đáng kể.</p>
+          </div>
+          <div class="border-l-2 border-sage pl-4">
+            <p class="text-xs font-semibold text-sage uppercase mb-1">Prompt nâng cao (Role + 4 phần + sai lầm phổ biến)</p>
+            <p class="italic text-inksoft mb-1">"Bạn là giáo sư vật lý... dùng ẩn dụ đời thường, định nghĩa khoa học, 2 ví dụ ứng dụng, sai lầm phổ biến nhất..."</p>
+            <p class="text-inksoft">Trả về đúng 4 phần rõ tiêu đề, kèm công thức S = k ln W và chỉ ra hiểu lầm thường gặp — hoàn chỉnh, rất sư phạm.</p>
+          </div>
+        </div>
+        <p class="text-xs font-semibold text-inksoft uppercase mt-5 mb-2">Ảnh chụp màn hình quá trình</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <img src="images/bai3/img8.jpg" alt="Tác vụ 2 - ảnh chụp 1" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img9.jpg" alt="Tác vụ 2 - ảnh chụp 2" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img10.jpg" alt="Tác vụ 2 - ảnh chụp 3" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img11.jpg" alt="Tác vụ 2 - ảnh chụp 4" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img12.jpg" alt="Tác vụ 2 - ảnh chụp 5" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img13.jpg" alt="Tác vụ 2 - ảnh chụp 6" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img14.jpg" alt="Tác vụ 2 - ảnh chụp 7" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+      </details>
+
+      <details class="group bg-white border border-line rounded-xl p-5 open:pb-2">
+        <summary class="cursor-pointer font-display text-lg font-medium flex items-center justify-between">
+          <span>3. Tạo bộ câu hỏi ôn tập về Trí tuệ nhân tạo</span>
+          <span class="text-inksoft text-sm group-open:rotate-180 transition-transform">⌄</span>
+        </summary>
+        <div class="space-y-3 text-sm mt-4">
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cơ bản</p>
+            <p class="italic text-inksoft mb-1">"Tạo câu hỏi ôn tập về Trí tuệ nhân tạo."</p>
+            <p class="text-inksoft">30 câu hỏi không đáp án, không phân loại rõ, nhiều câu quá khó so với nhu cầu.</p>
+          </div>
+          <div class="border-l-2 border-line pl-4">
+            <p class="text-xs font-semibold text-inksoft uppercase mb-1">Prompt cải tiến</p>
+            <p class="italic text-inksoft mb-1">"Tạo 10 câu ôn tập AI cơ bản: 4 trắc nghiệm, 3 đúng/sai, 3 tự luận ngắn, bao phủ định nghĩa – phân loại – ứng dụng AI."</p>
+            <p class="text-inksoft">Đúng cơ cấu yêu cầu, nội dung bao phủ đủ 3 chủ đề chỉ định.</p>
+          </div>
+          <div class="border-l-2 border-sage pl-4">
+            <p class="text-xs font-semibold text-sage uppercase mb-1">Prompt nâng cao (Role + Thang Bloom + đáp án)</p>
+            <p class="italic text-inksoft mb-1">"Bạn là chuyên gia thiết kế đề thi... theo thang Bloom: 2 câu Nhớ, 2 câu Hiểu, 2 câu Vận dụng, 1 câu Phân tích, kèm đáp án gợi ý."</p>
+            <p class="text-inksoft">7 câu phân cấp tư duy rõ ràng, câu Phân tích có bảng so sánh AI hẹp/AI tổng quát — giá trị sư phạm cao nhất.</p>
+          </div>
+        </div>
+        <p class="text-xs font-semibold text-inksoft uppercase mt-5 mb-2">Ảnh chụp màn hình quá trình</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <img src="images/bai3/img15.jpg" alt="Tác vụ 3 - ảnh chụp 1" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img16.jpg" alt="Tác vụ 3 - ảnh chụp 2" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img17.jpg" alt="Tác vụ 3 - ảnh chụp 3" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img18.jpg" alt="Tác vụ 3 - ảnh chụp 4" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img19.jpg" alt="Tác vụ 3 - ảnh chụp 5: prompt cơ bản" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+          <img src="images/bai3/img20.jpg" alt="Tác vụ 3 - ảnh chụp 6: prompt nâng cao theo thang Bloom" class="rounded-lg border border-line w-full aspect-video object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="py-10 border-b border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-5">Sáu nguyên tắc viết prompt hiệu quả</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">1. Xác định vai trò (Role)</p><p class="text-xs text-inksoft leading-relaxed">Gán danh tính chuyên môn cho AI để điều chỉnh phong cách và độ sâu phù hợp.</p></div>
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">2. Chỉ định đối tượng</p><p class="text-xs text-inksoft leading-relaxed">Nêu rõ người đọc là ai để AI đơn giản hoá thuật ngữ đúng mức.</p></div>
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">3. Định nghĩa cấu trúc đầu ra</p><p class="text-xs text-inksoft leading-relaxed">Yêu cầu format cụ thể (số bước, số phần) để AI tổ chức thông tin có hệ thống.</p></div>
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">4. Giới hạn phạm vi</p><p class="text-xs text-inksoft leading-relaxed">Thu hẹp nội dung cần xử lý (số từ, lĩnh vực cụ thể) để tránh dàn trải.</p></div>
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">5. Chain-of-Thought</p><p class="text-xs text-inksoft leading-relaxed">Yêu cầu AI lý luận từng bước để kết quả logic và đầy đủ hơn.</p></div>
+      <div class="bg-white border border-line rounded-xl p-4"><p class="text-sm font-medium mb-1">6. Yêu cầu đặc thù hoá</p><p class="text-xs text-inksoft leading-relaxed">Đề nghị ví dụ, ẩn dụ hoặc chỉ ra sai lầm phổ biến để câu trả lời có chiều sâu hơn.</p></div>
+    </div>
+  </section>
+
+  <section class="py-10 border-t border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-3">Tổng kết</h2>
+    <p class="text-ink leading-relaxed mb-4">
+      Prompt dài hơn không nhất thiết tốt hơn — điều quan trọng là prompt chứa đúng loại thông
+      tin: vai trò, đối tượng, cấu trúc và giới hạn. Prompt engineering không phải nghệ thuật bí
+      ẩn mà là kỹ năng có thể học được thông qua thực hành có hệ thống.
+    </p>
+    <p class="text-ink leading-relaxed">
+      Điều quan trọng nhất rút ra được: AI không đọc được suy nghĩ của người dùng — mọi thứ cần
+      truyền đạt phải được viết rõ trong prompt. Đây cũng là lý do kỹ năng viết prompt ngày càng
+      trở thành năng lực cốt lõi trong môi trường học tập và làm việc có AI hỗ trợ.
+    </p>
+  </section>
+
+  <div class="py-10 flex justify-between border-t border-line text-sm font-medium">
+    <a href="bai-2.html" class="text-inksoft hover:text-sage transition-colors">← Bài 2</a>
+    <a href="bai-4.html" class="text-sage hover:text-sagedark transition-colors">Bài 4 →</a>
+  </div>
+
+</main>
+
+<footer class="py-10 text-sm text-inksoft border-t border-line">
+  <div class="max-w-3xl mx-auto px-6">
+    Trần Thị Hà Nhi · Ngôn ngữ và Văn học Trung Quốc · ĐHNN — ĐHQGHN
+  </div>
+</footer>
+
+</body>
+</html>

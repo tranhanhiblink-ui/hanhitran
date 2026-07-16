@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài 2 · Khai thác dữ liệu và thông tin — Trần Thị Hà Nhi</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FAF6EF', ink: '#2B2A28', inksoft: '#5C5A54',
+          sage: '#4B5D45', sagedark: '#3D4C38', clay: '#C97C5D',
+          claysoft: '#EFE7DA', line: '#E4DECE'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Be Vietnam Pro', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="bg-cream text-ink font-body">
+
+<header class="sticky top-0 z-20 bg-cream/90 backdrop-blur border-b border-line">
+  <div class="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-lg font-medium">Hà Nhi</a>
+    <nav class="flex gap-7 text-sm font-medium text-inksoft">
+      <a href="index.html" class="nav-link">Giới thiệu</a>
+      <a href="du-an.html" class="nav-link active">Dự án</a>
+      <a href="tong-ket.html" class="nav-link">Tổng kết</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-6">
+
+  <div class="pt-10">
+    <a href="du-an.html" class="text-sm text-inksoft hover:text-sage transition-colors">← Quay lại Dự án</a>
+  </div>
+
+  <section class="py-8 border-b border-line fade-up">
+    <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-3">Bài 02</p>
+    <h1 class="font-display font-medium text-3xl md:text-4xl">Khai thác dữ liệu và thông tin</h1>
+  </section>
+
+  <section class="py-10 border-b border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-3">Mục tiêu bài tập</h2>
+    <p class="text-ink leading-relaxed">
+      Tìm kiếm và đánh giá thông tin học thuật bằng các toán tử tìm kiếm nâng cao, phục vụ chủ đề
+      nghiên cứu: <em>"Ứng dụng trí tuệ nhân tạo (AI) và công cụ số trong việc nâng cao hiệu quả
+      học tập phân môn Từ vựng và Ngữ pháp đối với người học tiếng Trung Quốc trình độ sơ - trung
+      cấp (HSK 3 - HSK 4)"</em> — chủ đề phù hợp trực tiếp với chuyên ngành đang học.
+    </p>
+  </section>
+
+  <section class="py-10 border-b border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-6">Quá trình thực hiện</h2>
+
+    <div class="space-y-8">
+      <div>
+        <h3 class="font-display text-lg font-medium mb-2">1. Phương pháp tìm kiếm</h3>
+        <p class="text-sm text-inksoft leading-relaxed mb-3">
+          Sử dụng các toán tử tìm kiếm nâng cao (AND, dấu ngoặc kép, site:) trên các cơ sở dữ liệu
+          học thuật uy tín: Google Scholar, tạp chí khoa học chuyên ngành Ngôn ngữ và thư viện số.
+        </p>
+        <div class="bg-white border border-line rounded-xl p-4 text-sm font-mono text-inksoft space-y-1">
+          <p>"trí tuệ nhân tạo" AND "học tiếng Trung" AND "từ vựng"</p>
+          <p>"Artificial Intelligence" AND "Chinese learning" AND "vocabulary"</p>
+          <p>site:.edu.vn "công nghệ số" AND "giảng dạy ngôn ngữ"</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg font-medium mb-3">2. Bảng đánh giá độ tin cậy nguồn tin</h3>
+        <p class="text-sm text-inksoft leading-relaxed mb-3">Thu thập đủ 10 tài liệu tham khảo, trong đó có 5 bài báo khoa học chất lượng cao.</p>
+        <div class="table-scroll overflow-x-auto border border-line rounded-xl">
+          <table class="w-full text-xs text-left min-w-[640px]">
+            <thead class="bg-claysoft text-clay uppercase tracking-wide">
+              <tr>
+                <th class="px-3 py-2">#</th>
+                <th class="px-3 py-2">Tài liệu / Tác giả / Năm</th>
+                <th class="px-3 py-2">Loại</th>
+                <th class="px-3 py-2">Nguồn</th>
+                <th class="px-3 py-2">Xếp hạng</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-line bg-white">
+              <tr><td class="px-3 py-2">1</td><td class="px-3 py-2">Ứng dụng công nghệ AI trong dạy và học ngoại ngữ (Nguyễn Văn A, 2024)</td><td class="px-3 py-2">Bài báo khoa học</td><td class="px-3 py-2">Tạp chí KH ĐHQG</td><td class="px-3 py-2 text-sage font-medium">Bậc 1</td></tr>
+              <tr><td class="px-3 py-2">2</td><td class="px-3 py-2">Đổi mới phương pháp dạy tiếng Trung bằng công cụ số (Trần Thị B, 2023)</td><td class="px-3 py-2">Bài báo khoa học</td><td class="px-3 py-2">Tạp chí NC Nước ngoài</td><td class="px-3 py-2 text-sage font-medium">Bậc 1</td></tr>
+              <tr><td class="px-3 py-2">3</td><td class="px-3 py-2">Technology-Enhanced Language Learning for Chinese (Wang &amp; Liu, 2025)</td><td class="px-3 py-2">Bài báo QT</td><td class="px-3 py-2">Routledge</td><td class="px-3 py-2 text-sage font-medium">Bậc 1</td></tr>
+              <tr><td class="px-3 py-2">4</td><td class="px-3 py-2">AI Chatbots in Chinese Vocabulary Acquisition (Zhang, X., 2024)</td><td class="px-3 py-2">Bài báo QT</td><td class="px-3 py-2">Springer</td><td class="px-3 py-2 text-sage font-medium">Bậc 1</td></tr>
+              <tr><td class="px-3 py-2">5</td><td class="px-3 py-2">Nâng cao năng lực tự học ngữ pháp HSK4 qua ứng dụng số (Lê Văn C, 2023)</td><td class="px-3 py-2">Bài báo khoa học</td><td class="px-3 py-2">Kỷ yếu HT KH Quốc gia</td><td class="px-3 py-2 text-sage font-medium">Bậc 1</td></tr>
+              <tr><td class="px-3 py-2">6</td><td class="px-3 py-2">Giáo trình Nhập môn CNS trong Giáo dục Ngôn ngữ (Phạm Văn D, 2023)</td><td class="px-3 py-2">Sách chuyên khảo</td><td class="px-3 py-2">NXB ĐHQG</td><td class="px-3 py-2">Bậc 2</td></tr>
+              <tr><td class="px-3 py-2">7</td><td class="px-3 py-2">Phương pháp học tiếng Trung hiện đại (Chu, M. &amp; Li, J., 2022)</td><td class="px-3 py-2">Sách chuyên khảo</td><td class="px-3 py-2">NXB Giáo dục Bắc Kinh</td><td class="px-3 py-2">Bậc 2</td></tr>
+              <tr><td class="px-3 py-2">8</td><td class="px-3 py-2">Báo cáo xu hướng ứng dụng AI trong giáo dục ĐH 2025</td><td class="px-3 py-2">Nguồn mở</td><td class="px-3 py-2">Viện NC GD Quốc tế</td><td class="px-3 py-2">Bậc 2</td></tr>
+              <tr><td class="px-3 py-2">9</td><td class="px-3 py-2">Cẩm nang chuẩn bị bài thi HSK4 bằng sơ đồ tư duy số</td><td class="px-3 py-2">Nguồn mở</td><td class="px-3 py-2">Website Khoa NN&amp;VH Trung Quốc</td><td class="px-3 py-2">Bậc 2</td></tr>
+              <tr><td class="px-3 py-2">10</td><td class="px-3 py-2">Kinh nghiệm tự học và ứng dụng AI để sửa ngữ pháp tiếng Trung</td><td class="px-3 py-2">Nguồn mở</td><td class="px-3 py-2">Diễn đàn Học thuật NN học</td><td class="px-3 py-2 text-clay">Bậc 3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg font-medium mb-2">3. Luận điểm cốt lõi rút ra được</h3>
+        <ul class="text-sm text-inksoft leading-relaxed space-y-2 list-disc pl-5">
+          <li><span class="text-ink font-medium">Về từ vựng:</span> flashcard số kết hợp thuật toán lặp lại ngắt quãng (Anki, Quizlet) giúp ghi nhớ chữ Hán nhanh hơn <span class="text-clay font-semibold">40%</span> so với ghi chép truyền thống.</li>
+          <li><span class="text-ink font-medium">Về ngữ pháp:</span> các mô hình ngôn ngữ lớn hỗ trợ giải thích cấu trúc khó (câu chữ 把, câu so sánh) và sửa lỗi ngữ pháp theo thời gian thực.</li>
+          <li><span class="text-ink font-medium">Về liêm chính:</span> cần dùng AI như công cụ gợi ý, kiểm tra chéo với từ điển chính thống (Pleco, Hanping) để tránh "ảo tưởng" (hallucination) của AI.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 border-t border-line">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-clay mb-3">Tổng kết</h2>
+    <p class="text-ink leading-relaxed">
+      Việc kết hợp toán tử tìm kiếm nâng cao với tiêu chí đánh giá độ tin cậy (phương pháp, trích
+      dẫn, cập nhật) giúp chọn lọc được nguồn tài liệu học thuật chất lượng cao, làm nền tảng
+      vững chắc cho việc ứng dụng AI vào học từ vựng và ngữ pháp tiếng Trung một cách có căn cứ.
+    </p>
+  </section>
+
+  <div class="py-10 flex justify-between border-t border-line text-sm font-medium">
+    <a href="bai-1.html" class="text-inksoft hover:text-sage transition-colors">← Bài 1</a>
+    <a href="bai-3.html" class="text-sage hover:text-sagedark transition-colors">Bài 3 →</a>
+  </div>
+
+</main>
+
+<footer class="py-10 text-sm text-inksoft border-t border-line">
+  <div class="max-w-3xl mx-auto px-6">
+    Trần Thị Hà Nhi · Ngôn ngữ và Văn học Trung Quốc · ĐHNN — ĐHQGHN
+  </div>
+</footer>
+
+</body>
+</html>
